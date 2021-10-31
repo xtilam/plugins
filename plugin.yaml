@@ -8,4 +8,5 @@ title: DraculaTheme
 description: DraculaTheme
 spec:                                                             
   extensions:
-  - "${CHE_PROJECTS_ROOT}/dracula-theme.theme-dracula-2.24.0.vsix" 
+  - "https://raw.githubusercontent.com/xtilam/plugins/master/dracula-theme.theme-dracula-2.24.0.vsix" 
+  - "https://raw.githubusercontent.com/xtilam/plugins/master/eamodio.gitlens-11.6.1.vsix" 
