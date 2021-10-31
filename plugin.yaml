@@ -1,14 +1,14 @@
 apiVersion: v2
-publisher: CoenraadS
-name: bracket-pair-colorizer
+publisher: dracula-theme.theme-dracula
+name: dracula-theme.theme-dracula
 version: 1.0.61
 type: VS Code extension
-displayName: Bracket Pair Colorizer
-title: Bracket Pair Colorizer
-description: Bracket Pair Colorizer
+displayName: dracula-theme.theme-dracula
+title: dracula-theme.theme-dracula
+description: dracula-theme.theme-dracula
 category: Language
 firstPublicationDate: '2020-07-30'
 spec:                                                             
   extensions:
-  - "{{REPOSITORY}}/CoenraadS.bracket-pair-colorizer-1.0.61.vsix" 
+  - "https://raw.githubusercontent.com/xtilam/plugins/master/dracula-theme.theme-dracula-2.24.0.vsix" 
 latestUpdateDate: "2020-07-30"
