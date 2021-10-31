@@ -1,11 +1,11 @@
 apiVersion: v2
-publisher: dracula-theme.theme-dracula
-name: dracula-theme.theme-dracula
+publisher: dracula-theme
+name: Dracula Theme
 version: 1.0.61
 type: VS Code extension
-displayName: dracula-theme.theme-dracula
-title: dracula-theme.theme-dracula
-description: dracula-theme.theme-dracula
+displayName: dracula-theme
+title: dracula-theme
+description: dracula-theme
 category: Language
 firstPublicationDate: '2020-07-30'
 spec:                                                             
