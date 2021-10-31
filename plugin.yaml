@@ -1,0 +1,11 @@
+apiVersion: v2
+publisher: Dracula Theme
+name: DraculaTheme
+version: 1.0.61
+type: VS Code extension
+displayName: DraculaTheme
+title: DraculaTheme
+description: DraculaTheme
+spec:                                                             
+  extensions:
+  - "https://raw.githubusercontent.com/xtilam/plugins/master/dracula-theme.theme-dracula-2.24.0.vsix" 

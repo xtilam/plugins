@@ -1,0 +1,14 @@
+apiVersion: v2
+publisher: CoenraadS
+name: bracket-pair-colorizer
+version: 1.0.61
+type: VS Code extension
+displayName: Bracket Pair Colorizer
+title: Bracket Pair Colorizer
+description: Bracket Pair Colorizer
+category: Language
+firstPublicationDate: '2020-07-30'
+spec:                                                             
+  extensions:
+  - "{{REPOSITORY}}/CoenraadS.bracket-pair-colorizer-1.0.61.vsix" 
+latestUpdateDate: "2020-07-30"
