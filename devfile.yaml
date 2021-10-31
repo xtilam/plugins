@@ -1,10 +1,10 @@
 apiVersion: 1.0.0
 metadata:
-  name: php-laravel-xtuu9
+  name: laravel-example-app
 projects:
-  - name: laravel-realworld-example-app
+  - name: test
     source:
-      location: 'https://github.com/che-samples/php-laravel'
+      location: 'https://github.com/xtilam/plugins'
       type: git
 components:
   - id: bmewburn/vscode-intelephense-client/latest
@@ -49,40 +49,3 @@ components:
     type: chePlugin
   - id: redhat/vscode-yaml/latest
     type: chePlugin
-commands:
-  - name: 1. Install dependencies
-    actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/laravel-realworld-example-app'
-        type: exec
-        command: composer install
-        component: php
-  - name: 2. Copy the example env file and make the required configuration changes in the .env file
-    actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/laravel-realworld-example-app'
-        type: exec
-        command: cp .env.example .env
-        component: php
-  - name: 3. Generate a new application key
-    actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/laravel-realworld-example-app'
-        type: exec
-        command: 'php artisan key:generate'
-        component: php
-  - name: 4. Generate a new JWT authentication secret key
-    actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/laravel-realworld-example-app'
-        type: exec
-        command: 'php artisan jwt:secret'
-        component: php
-  - name: 5. Run the database migrations
-    actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/laravel-realworld-example-app'
-        type: exec
-        command: php artisan migrate
-        component: php
-  - name: 6. Start Artisan Web Server
-    actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/laravel-realworld-example-app'
-        type: exec
-        command: php artisan serve --host 0.0.0.0
-        component: php
