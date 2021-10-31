@@ -1,14 +1,11 @@
 apiVersion: v2
 publisher: Dracula Theme
-name: Dracula Theme
+name: DraculaTheme
 version: 1.0.61
 type: VS Code extension
-displayName: Dracula Theme
-title: Dracula Theme
-description: Dracula Theme
-category: Language
-firstPublicationDate: '2020-07-30'
+displayName: DraculaTheme
+title: DraculaTheme
+description: DraculaTheme
 spec:                                                             
   extensions:
   - "https://raw.githubusercontent.com/xtilam/plugins/master/dracula-theme.theme-dracula-2.24.0.vsix" 
-latestUpdateDate: "2020-07-30"
