@@ -1,0 +1,51 @@
+apiVersion: 1.0.0
+metadata:
+  name: laravel-example-app
+projects:
+  - name: test
+    source:
+      location: 'https://github.com/xtilam/plugins'
+      type: git
+components:
+  - id: bmewburn/vscode-intelephense-client/latest
+    type: chePlugin
+    registryUrl: 'https://eclipse-che.github.io/che-plugin-registry/7.38.0/v3/'
+  - id: felixfbecker/php-debug/latest
+    type: chePlugin
+    registryUrl: 'https://eclipse-che.github.io/che-plugin-registry/7.38.0/v3/'
+  - mountSources: true
+    endpoints:
+      - name: 8000-tcp
+        port: 8000
+    memoryLimit: 512Mi
+    type: dockerimage
+    volumes:
+      - name: composer
+        containerPath: /home/user/.composer
+    alias: php
+    image: 'quay.io/eclipse/che-php-7:ce0526f'
+  - mountSources: true
+    endpoints:
+      - attributes:
+          discoverable: 'true'
+        name: db
+        port: 3306
+    memoryLimit: 256Mi
+    type: dockerimage
+    alias: mysql
+    image: 'quay.io/eclipse/che--centos--mysql-57-centos7:latest-e08ee4d43b7356607685b69bde6335e27cf20c020f345b6c6c59400183882764'
+    env:
+      - value: homestead
+        name: MYSQL_USER
+      - value: secret
+        name: MYSQL_PASSWORD
+      - value: secret
+        name: MYSQL_ROOT_PASSWORD
+      - value: homestead
+        name: MYSQL_DATABASE
+  - id: vscode/typescript-language-features/latest
+    type: chePlugin
+  - id: redhat/vscode-xml/latest
+    type: chePlugin
+  - id: redhat/vscode-yaml/latest
+    type: chePlugin
